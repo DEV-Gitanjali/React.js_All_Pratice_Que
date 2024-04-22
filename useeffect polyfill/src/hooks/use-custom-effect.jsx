@@ -6,18 +6,25 @@ const useCustomEffect=(effect , deps) =>{
 
     if(isFirstRender.current){
         isFirstRender.current = false;
-        effect();
-        return;
+        const cleanup = effect();
+
+        return()=>{
+            if(cleanup && cleanup === "function"){
+                cleanup();
+            }
+        };
     }
 
 //    deps changed and no deps array
     const depsChanged = deps ?JSON.stringify(deps)!== JSON.stringify(prevDeps.current): true;
 
     if(depsChanged){
-        effect();
+        if(cleanup && typeof cleanup === "function"  && deps ){
+            cleanup();
+        }
     }
 
     prevDrps.current = deps || [];
 };
 
-export default useCustomEffect;
+export default useCustomEffect; 
