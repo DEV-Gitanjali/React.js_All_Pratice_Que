@@ -3,6 +3,7 @@ import Counter from './components/Counter'
 import PostList from './components/PostList';
 import WindowDimensions from './components/window-dimensions';
 import DebounceInput from './components/debounce-input';
+import UseInfo from './components/use-info';
 
 const App = () => {
 
@@ -48,7 +49,13 @@ const App = () => {
       </h4>
        <DebounceInput/>
 
-
+ <h4>
+        <u>
+          Question 5: Build a Custom hook that stores and retrieves data from
+          the browser localStorage.
+        </u>
+      </h4>
+      <UseInfo/>
     </div>
   );
 };
