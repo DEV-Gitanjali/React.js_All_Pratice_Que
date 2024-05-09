@@ -1,9 +1,10 @@
-import React from 'react';
+
 import Counter from './components/Counter'
 import PostList from './components/PostList';
 import WindowDimensions from './components/window-dimensions';
 import DebounceInput from './components/debounce-input';
 import UseInfo from './components/use-info';
+import IntersecctionElement from './components/intersection-element';
 
 const App = () => {
 
@@ -56,6 +57,16 @@ const App = () => {
         </u>
       </h4>
       <UseInfo/>
+
+
+      <h4>
+        <u>
+          Question 6: Build a Custom hook that observes when an element comes
+          into the viewport.
+        </u>
+      </h4>
+
+      <IntersecctionElement/>
     </div>
   );
 };
