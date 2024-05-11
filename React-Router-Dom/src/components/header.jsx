@@ -5,7 +5,7 @@ const Header = () => {
 
   return (
     
-    <header>
+    <header className='header'>
         <NavLink  
         // className={({isActive,isPending, isTransitioning})=>[
         //     isActive ? 'active' :"",
